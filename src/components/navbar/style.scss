@@ -1,0 +1,22 @@
+.navbar {
+    width: 100%;
+    height: 64px;
+    background-color: #bc1d1d;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item {
+    align-self: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+
+    &.active {
+        color: black;
+    }
+}
