@@ -6,7 +6,7 @@ class Reports extends React.Component {
         return (
             <Layout>
                 <div>
-                    test
+                    reports
                 </div>
             </Layout>
         );

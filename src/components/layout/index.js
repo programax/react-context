@@ -2,23 +2,32 @@ import React, { Fragment } from 'react';
 import Navbar from '../navbar';
 import Modal from '../modal';
 import './style.scss';
+import { AppContext } from '../../context/appContext';
 
-function Layout(props) {
-    const  {
-        children,
-    } = props;
+class Layout extends React.Component {
+    render() {
+        const  {
+            children,
+        } = this.props;
 
-    return (
-        <Fragment>
-            <Navbar />
+        const {
+            isModalOpen,
+        } = this.context;
 
-            <div className="content">
-                {children}
-            </div>
+        return (
+            <Fragment>
+                <Navbar />
 
-            {/* <Modal /> */}
-        </Fragment>
-    );
+                <div className="content">
+                    {children}
+                </div>
+
+                {isModalOpen && <Modal />}
+            </Fragment>
+        );
+    }
 }
+
+Layout.contextType = AppContext;
 
 export default Layout;
